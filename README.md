@@ -2,9 +2,17 @@
 
 ## 🌐 Sobre o Projeto
 
-A **Apeperia** cria aplicativos personalizados para todas as pessoas, com um modelo inovador: o cliente assina o serviço e recebe tanto o desenvolvimento quanto a manutenção contínua do aplicativo, sem custos adicionais futuros.
+A **Apeperia** é uma startup que cria aplicativos personalizados com um modelo inovador: em vez de cobrar por manutenção separadamente, a empresa oferece um serviço por assinatura. Assim, os clientes têm acesso contínuo a atualizações e suporte sem surpresas.
 
-Nosso diferencial está em atender de forma inclusiva e acessível, garantindo que qualquer pessoa, independentemente de suas habilidades ou dispositivos, possa navegar, entender e interagir com o conteúdo do nosso site e produtos.
+O projeto simula uma **landing page completa e responsiva**, com seções como:
+
+- Sobre a empresa
+- Planos de assinatura
+- Blog com destaques
+- Formulário de contato
+- Newsletter com modal
+- Informações institucionais
+- Rodapé com links sociais
 
 ---
 
@@ -18,9 +26,8 @@ As principais melhorias incluem:
 
 ### ✅ JavaScript Acessível
 
-- **Teclado como primeiro cidadão**: suporte total à navegação por teclado (tab, enter, esc), especialmente em elementos interativos como modais e menus.
+- **Teclado**: suporte total à navegação por teclado (tab, enter, esc), especialmente em elementos interativos como modais e menus.
 - **Foco visível e gerenciado**: controle do foco ao abrir/fechar componentes via JS.
-- **Atributos ARIA**: inserção dinâmica de `aria-expanded`, `aria-hidden`, `role="dialog"` etc., para melhorar a experiência de leitores de tela.
 - **Mensagens de erro acessíveis** em formulários.
 
 ### ✅ HTML Semântico
