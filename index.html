@@ -65,7 +65,7 @@
     </header>
     
 
-    <main class="conteudo" class="conteudoPrincipal" >
+    <main class="conteudo" id="conteudoPrincipal" >
       <section class="secaoDestaque">
         <h1 class="secaoDestaque-titulo">
           APLICATIVOS NA MEDIDA
@@ -200,9 +200,8 @@
         <h2 class="secaoBlog-titulo tituloPadrao">
           BLOG
         </h2>
-
-        <ul class="listaDeArtigos">
-
+        <h3 id="tituloBlog" class="escondeVisualmente">Lista de artigos</h3>
+        <ul class="listaDeArtigos" aria-labelledby="listaDeArtigos-slider-item">
           <li id="new0" class="listaDeArtigos-item">
             <article class="listaDeArtigos-artigo">
               <img src="img/10-aplicativos-mais-baixados.png" class="listaDeArtigos-artigo-img" alt="">
@@ -316,55 +315,55 @@
 
             <div class="contatoCampo contatoCampo--sucesso">
               <label for="nome">Nome: </label>
-              <input type="text" id="nome" class="contatoCampo--validouFoi" placeholder="Nome..." required>
+              <input type="text" id="nome" name="nome"  class="contatoCampo--validouFoi" placeholder="Nome..." required>
             </div>  
 
             <div class="contatoCampo contatoCampo--erro">
               <label for="email">Email: </label>
-              <input type="email" id="email" class="contatoCampo--validouErro" placeholder="Email.." required>
+              <input type="email" id="email" name="email" class="contatoCampo--validouErro" placeholder="Email.." required>
               <span class="contatoCampo-msg contatoCampo-msg--erro">
                 Você quis dizer <a href="#">gmail.com?</a>
               </span>
             </div>
 
             <div class="contatoCampo contatoCampo--erro">
-              <label>Telefone: </label>
-              <input type="text" class="contatoCampo--validouErro" placeholder="(11) 5571-2751">
+              <label for="telefone">Telefone: </label>
+              <input id="telefone" name="telefone" type="text" class="contatoCampo--validouErro" placeholder="(11) 5571-2751">
               <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
             </div>     
 
             <div class="contatoCampo">
-              <label>CEP: </label>
-              <input type="text" maxlength="8" placeholder="Exemplo: 04101-300" required>
+              <label for="cep">CEP: </label>
+              <input id="cep" name="cep" type="text" maxlength="8" placeholder="Exemplo: 04101-300" required>
             </div>
 
             <div class="contatoCampo">
-              <label>Endereço: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Rua Vergueiro">
+              <label for="endereco">Endereço: </label>
+              <input name="endereco" id="endereco" type="text" class="contatoCampo-campoDesabilitado" readonly value="Rua Vergueiro">
             </div>   
 
             <div class="contatoCampo">
-              <label>Bairro: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Vila Mariana">
+              <label for="bairro">Bairro: </label>
+              <input id="bairro" name="bairro" type="text" class="contatoCampo-campoDesabilitado" readonly value="Vila Mariana">
             </div>   
 
             <div class="contatoCampo">
-              <label>Cidade: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="São Paulo">
+              <label for="cidade">Cidade: </label>
+              <input id="cidade" name="cidade" type="text" class="contatoCampo-campoDesabilitado" readonly value="São Paulo">
             </div>   
 
             <div class="contatoCampo">
-              <label>Estado: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="SP">
+              <label for="estato">Estado: </label>
+              <input id="estado" name="estado" type="text" class="contatoCampo-campoDesabilitado" readonly value="SP">
             </div>   
 
             <div class="contatoCampo">
-              <label>Mensagem: </label>
-              <textarea name="" cols="30" rows="10" required></textarea>
+              <label for="mensagem">Mensagem: </label>
+              <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea>
             </div>
 
             <div class="contatoCampo">
-              <input type="checkbox" checked value="receberDestaques" class="contatoCampo-checkbox" id="receberEmail">
+              <input type="checkbox" checked value="receberDestaques" class="contatoCampo-checkbox" id="receberEmail" name="receberEmail">
               <label class="contatoCampo-label" for="receberEmail">Receber destaques por email</label>
             </div>
 
@@ -417,7 +416,7 @@
           <label class="dialogNewsletter-label" for="emailNewsLetter">Email</label>
           <input type="email" class="dialogNewsletter-campo" placeholder="Digite seu e-mail..." id="emailNewsLetter" required>
           <button class="dialogNewsletter-btn" type="submit">Assinar</button>
-          <button class="dialogNewsletter-fechar" type="button" onclick="fecharDialog()">×</button>
+          <button class="dialogNewsletter-fechar" type="button" onclick="fecharDialog()" aria-label="Fechar janela modal">Fechar modal</button>
         </form>
       </div>
       <div class="dialogNewsletter-overlay"></div>
