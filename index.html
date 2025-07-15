@@ -202,7 +202,7 @@
         </h2>
         <h3 id="tituloBlog" class="escondeVisualmente">Lista de artigos mais vistos na semana</h3>
         <ol class="listaDeArtigos" aria-labelledby="listaDeArtigos-slider-item">
-          <li id="new0" class="listaDeArtigos-item">
+          <li id="new0" class="listaDeArtigos-item" data-noticia="0">
             <article class="listaDeArtigos-artigo">
               <img src="img/10-aplicativos-mais-baixados.png" class="listaDeArtigos-artigo-img" alt="">
               <h2 class="listaDeArtigos-artigo-titulo">
@@ -217,7 +217,7 @@
             </article>
           </li>
 
-          <li id="new1" class="listaDeArtigos-item">
+          <li id="new1" class="listaDeArtigos-item" data-noticia="1">
             <article class="listaDeArtigos-artigo">
               <img src="img/ux-usabilidade.jpg" class="listaDeArtigos-artigo-img" alt="">
               <h2 class="listaDeArtigos-artigo-titulo">
@@ -232,7 +232,7 @@
             </article>
           </li>
 
-          <li id="new2" class="listaDeArtigos-item">
+          <li id="new2" class="listaDeArtigos-item" data-noticia="2">
             <article class="listaDeArtigos-artigo">
               <img src="img/dicas-acessibilidade.jpg" class="listaDeArtigos-artigo-img" alt="">
               <h2 class="listaDeArtigos-artigo-titulo">
@@ -307,28 +307,27 @@
           </h2>
 
           <form class="secaoContato-form">
-
-            <p class="secaoContato-form-legend">
+            <fieldset>
+            <legend class="secaoContato-form-legend">
               Oi, tudo bem? Fale com a gente!
               Preencha seus dados e sua mensagem:
-            </p>
+            </legend>
 
-            <div class="contatoCampo contatoCampo--sucesso">
+            <div class="contatoCampo">
               <label for="nome">Nome: </label>
-              <input type="text" id="nome" name="nome"  class="contatoCampo--validouFoi" placeholder="Nome..." required>
+              <input type="text" id="nome" name="nome" placeholder="Nome..." required>
             </div>  
 
-            <div class="contatoCampo contatoCampo--erro">
+            <div class="contatoCampo ">
               <label for="email">Email: </label>
-              <input type="email" id="email" name="email" class="contatoCampo--validouErro" placeholder="Email.." required>
-              <span class="contatoCampo-msg contatoCampo-msg--erro">
-                Você quis dizer <a href="#">gmail.com?</a>
+              <input type="email" id="email" name="email" placeholder="Email.." required>
+              <span class="contatoCampo-msg" id="sugestao">
               </span>
             </div>
 
-            <div class="contatoCampo contatoCampo--erro">
+            <div class="contatoCampo ">
               <label for="telefone">Telefone: </label>
-              <input id="telefone" name="telefone" type="text" class="contatoCampo--validouErro" placeholder="(11) 5571-2751">
+              <input id="telefone" name="telefone" type="text" placeholder="(11) 5571-2751">
               <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
             </div>     
 
@@ -375,7 +374,7 @@
                 Verifique os erros acima
               </span>
             </div>
-
+            </fieldset>
           </form>
         </div> <!--fim .container da .secaoContato-->
 
@@ -461,5 +460,9 @@
     </footer>
     <script src="js/carousel.js"></script>
     <script src="js/dialog.js" ></script>
+    <script src="js/cep-check.js"></script>
+    <script src="js/mail-check.js"></script>
+    <script src="js/mail-check-config.js"></script>
+    <script src="js/validation.js"></script>
   </body>
 </html>
